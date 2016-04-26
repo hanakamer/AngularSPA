@@ -8,13 +8,13 @@ function mainController($scope, $http) {
           $scope.todos = data;
           console.log(data);
       })
-      .error(fucntion(data) {
+      .error(function(data) {
         console.log('Error: ' + data);
       });
 
   $scope.createTodo = function() {
     $http.post('/api/todos', $scope.formData)
-        .success(fucntion(data) {
+        .success(function(data) {
             $scope.formData =  {};
             $scope.todos = data;
             console.log(data);
